@@ -25,7 +25,7 @@ public class Carballo_Pelayo_PE07 {
         String gender = scanner.nextLine();
 
         // Prompt the user and accept string input for the student number
-        System.out.print("Enter student number: ");
+        System.out.print("Enter student number (Format: 20xx-xxxx): ");
         String studentNum = scanner.nextLine();
 
         // Prompt the user and accept string input for the department
@@ -59,16 +59,16 @@ public class Carballo_Pelayo_PE07 {
         // Print the retrieved values
         System.out.print("\n\n" + student.getFullName());
         System.out.println(", here's the data you gave me.");
-        System.out.println("\n          Personal Information: ");
-        System.out.println("\nFirst Name: " + retrievedFirstName);
-        System.out.println("\nLast Name: " + retrievedLastName);
-        System.out.println("\nGender: " + retrievedGender);
+        System.out.println("\nPersonal Information ");
+        System.out.println("First Name: " + retrievedFirstName);
+        System.out.println("Last Name: " + retrievedLastName);
+        System.out.println("Gender: " + retrievedGender);
 
         // Print the retrieved student-specific values
         System.out.println("\nStudent Information");
-        System.out.println("\nStudent Number: " + retrievedStudentNum);
-        System.out.println("\nDepartment: " + retrievedStudentDept);
-        System.out.println("\nCollege: " + retrievedStudentCollege);
+        System.out.println("Student Number: " + retrievedStudentNum);
+        System.out.println("Department: " + retrievedStudentDept);
+        System.out.println("College: " + retrievedStudentCollege);
     }
 }
 
@@ -149,7 +149,7 @@ class Student extends Person {
     // overloads setStudentnum to add validation to the value of studentNum
     public void setStudentNum(String studentNum, boolean validate) {
         if (validate) {
-            if (studentNum.length() == 9) {
+            if (studentNum.length() == 10) {
                 this.studentNum = studentNum;
             } else {
                 System.out.println("Invalid Student Number detected\n");
